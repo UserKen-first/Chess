@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace 五子棋
 {
-    public class PieceClass:PictureBox
+    abstract class PieceClass:PictureBox
     {
         private static readonly int IMAGE_WIDTH = 50;
         public PieceClass(
@@ -18,5 +18,8 @@ namespace 五子棋
             this.Location = new Point(x - IMAGE_WIDTH / 2, y - IMAGE_WIDTH / 2);
             this.Size = new Size(IMAGE_WIDTH, IMAGE_WIDTH);
         }
+
+        public abstract PieceType GetPieceType();
+        
     }
 }

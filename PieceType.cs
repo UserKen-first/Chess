@@ -8,6 +8,6 @@ namespace 五子棋
 {
     enum PieceType
     {
-        BLACK,WHITE // 預先定義好資料
+        BLACK,WHITE,None // 預先定義好資料
     }
 }

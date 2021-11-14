@@ -17,6 +17,19 @@ namespace 五子棋
         private static readonly int Node_Distance = 75;
 
         private PieceClass[,] Places = new PieceClass[9, 9]; // 宣告二維陣列 => 存放旗子的資料結構
+        
+        public PieceType GetPieceType(int nodelX, int nodelY)
+        {
+            if (Places[nodelX, nodelY] == null)
+            {
+                return PieceType.None; // 如果沒有旗子回傳空
+            }
+            else
+            {
+                return Places[nodelX, nodelY].GetPieceType(); // 如果有旗子，回傳顏色
+            }
+            
+        }
         public bool CanBePlaced(int x, int y) // 確認位置是否可放旗子
         {
             //TODO : 找出最近的節點(Node)

@@ -40,6 +40,7 @@ namespace 五子棋
             this.ClientSize = new System.Drawing.Size(723, 708);
             this.Name = "Form1";
             this.Text = "Golafu";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.ResumeLayout(false);
